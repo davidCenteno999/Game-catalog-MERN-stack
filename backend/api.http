@@ -1,0 +1,25 @@
+POST http://localhost:5555/auth/register
+Content-Type: application/json
+
+{
+  "username": "newuser90",
+  "password": "padsword123",
+  "email": "new90@gmial.com",
+  "role": "admin"
+}
+###
+
+POST http://localhost:5555/auth/login
+Content-Type: application/json
+
+{
+  "email": "new5@gmial.com",
+  "password": "padsword123"
+}
+
+
+###
+POST http://localhost:5555/auth/logout
+
+###
+GET http://localhost:5555/auth/profile

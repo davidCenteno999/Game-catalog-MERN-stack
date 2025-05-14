@@ -1,0 +1,7 @@
+.contenedor-flex {
+    display: flex;
+    align-items: center; /* Alinea los elementos al centro del contenedor */
+    width: 96%;
+    gap: 20px; /* Espacio entre elementos */
+  }
+  

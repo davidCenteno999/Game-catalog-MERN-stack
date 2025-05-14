@@ -1,0 +1,15 @@
+.contenedor-company {
+    display: flex; /* Cambiado a la sintaxis CSS correcta */
+    flex-direction: column; /* Cambiado a la sintaxis CSS correcta */
+    align-items: flex-start; /* Cambiado a la sintaxis CSS correcta */
+    gap: 0.5rem; /* Cambiado a la sintaxis CSS correcta */
+    width: 96%; /* Cambiado a la sintaxis CSS correcta */
+}
+
+.listar-company {
+    display: flex; /* Cambiado a la sintaxis CSS correcta */
+    flex-direction: column; /* Cambiado a la sintaxis CSS correcta */
+    align-items: flex-start; /* Cambiado a la sintaxis CSS correcta */
+    gap: 0.5rem; /* Cambiado a la sintaxis CSS correcta */
+    width: 99%; /* Cambiado a la sintaxis CSS correcta */
+}

@@ -1,0 +1,222 @@
+/* LOGO bounce-in */
+.logo-bounce-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.bounce-in {
+  animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(20px);
+  }
+  80% {
+    transform: scale(0.98) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Contenedor de la imagen de fondo con tamaño específico */
+.game-banner {
+  position: relative;
+  width: 1000px; /* Puedes ajustar el ancho según tus necesidades */
+  max-width: 1200px; /* Opcional, si deseas limitar el ancho máximo */
+  margin: 0 auto; /* Para centrar el contenedor horizontalmente si es necesario */
+  background-image: url('url-de-la-imagen-de-fondo'); /* Asegúrate de que esta URL esté correctamente configurada */
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  background-position: center;
+  border-radius: 12px;
+  padding-bottom: 50px; /* Espacio en la parte inferior del banner */
+
+}
+
+/* Título del juego sobre la imagen de fondo */
+.game-title {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Para un centrado exacto */
+  color: white;
+  font-size: 4rem; /* Tamaño del título, ajusta según necesites */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar visibilidad */
+  z-index: 1;
+}
+
+
+.background-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.background-image:hover {
+  transform: scale(1.03);
+}
+
+/* Game logo */
+.game-logo {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Screenshots */
+.screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.screenshot:hover {
+  transform: scale(1.02);
+}
+
+/* Review cards */
+.review-box {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.review-box:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid for store and awards */
+.store-award-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.store-box,
+.award-box {
+  border: 2px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background-color: #edf2f7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Trailer + Descargar en Grid */
+.trailer-download-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.trailer-box,
+.download-box {
+  border: 2px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background-color: #f7fafc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.trailer-box:hover,
+.download-box:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Action buttons */
+.action-buttons {
+  gap: 1rem;
+}
+
+.action-buttons button {
+  transition: transform 0.2s ease;
+}
+
+.action-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .store-award-grid,
+  .trailer-download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-logo {
+    width: 180px;
+  }
+
+  .background-image {
+    max-height: 250px;
+  }
+
+  .screenshot {
+    max-height: 200px;
+  }
+}
+/* Platform Box */
+.platform-box {
+  border: 2px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background-color: #e6f0ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.screenshot-slider {
+  position: relative;
+  width: 600px; /* Tamaño fijo para el slider */
+  height: 300px; /* Tamaño fijo para la imagen */
+  margin-bottom: 2rem;
+  border: 2px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Para que las imágenes no se salgan del contenedor */
+}
+
+.screenshot-slider:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot {
+  width: 100%;
+  height: 100%; /* Se ajusta a las dimensiones del contenedor */
+  object-fit: cover; /* Mantiene la relación de aspecto */
+  border-radius: 12px;
+}
+
+/* Styling for the navigation buttons */
+.icon-button {
+  background-color: transparent;
+  color: #4A90E2;
+  border: 1px solid #cbd5e0;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
